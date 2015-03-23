@@ -1,9 +1,9 @@
 <section>
 	<div class="content">
 		<div class="inf">
-			<h1>Intercoles Azteca Oaxaca 2015</h1>
+			<h1>Azteca Intercoles Oaxaca 2015</h1>
 			<h2>Próximos Partidos</h2>
-			
+
 			<!-- TABLA 1 -->
 			<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
 				<thead>
@@ -58,7 +58,7 @@
 						<td align="center">Cumbres</td>
 						<td align="center">VS <br> No jugado </td>
 						<td align="center">EST 100</td>
-					</tr>						
+					</tr>
 					<tr>
 						<td align="center">18:00</td>
 						<td align="center">Moisés Sáenz</td>
@@ -94,7 +94,7 @@
 						<td align="center">Instituto Carlos Gracida</td>
 						<td align="center">VS <br> No jugado </td>
 						<td align="center">Secundaría UNIVAS</td>
-					</tr>						
+					</tr>
 					<tr>
 						<td align="center">18:00</td>
 						<td align="center">Gabriela Mistral</td>
@@ -108,7 +108,7 @@
 						<td align="center">Veritam</td>
 					</tr>
 				</tbody>
-			</table>			
+			</table>
 
 			<!-- TABLA 4 -->
 			<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
@@ -130,7 +130,7 @@
 						<td align="center">Escuela 2</td>
 						<td align="center">VS <br> No jugado </td>
 						<td align="center">Moisés Sáenz</td>
-					</tr>						
+					</tr>
 					<tr>
 						<td align="center">18:00</td>
 						<td align="center">Coubertin</td>

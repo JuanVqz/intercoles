@@ -1,8 +1,7 @@
 <section>
 <div class="content">
 	<div class="inf">
-
-		<h1>Intercoles Azteca Oaxaca 2015</h1>
+		<h1>Azteca Intercoles Oaxaca 2015</h1>
 		<h2>Estadísticas Rama Varonil </h2>
 
 		<table  width="100%" border="0" cellpadding="0" cellspacing="0" >
@@ -45,10 +44,10 @@
 
 						}
 					}
-				?>		
+				?>
 		</table>
 
-		<h2>Estadisticas Rama Femenil</h2>
+		<h2>Estadísticas Rama Femenil</h2>
 		<table  width="100%" border="0" cellpadding="0" cellspacing="0" >
 			<tr>
 				<td width="30" align="left"  >&nbsp;</td>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 error_reporting(E_ALL ^E_NOTICE );
 $op = $_GET['op'];
 
@@ -7,12 +7,12 @@ switch ($op) {
 		$contenido = "convocatoria.php";
 		$titulo = "Intercoles Convocatoria";
 	break;
-	
+
 	case 'estadisticas':
 		$contenido = "estadisticas.php";
 		$titulo = "Intercoles Estadisticas";
 	break;
-	
+
 	case 'proximos_partidos':
 		$contenido = "proximos_partidos.php";
 		$titulo = "Intercoles Proximos Partidos";
@@ -33,7 +33,6 @@ switch ($op) {
 		$titulo = "Intercoles 2015";
 	break;
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -61,9 +60,9 @@ switch ($op) {
 					<ul>
 						<li><a href="?op=convocatoria" class="op">Convocatoria</a></li>
 						<li><a href="?op=estadisticas" class="op">Estadisticas</a></li>
-						<li><a href="?op=proximos_partidos" class="op">Proximos Partidos</a></li>
+						<li><a href="?op=proximos_partidos" class="op">Próximos Partidos</a></li>
 						<li><a href="?op=videos" class="op">Videos</a></li>
-						<li><a href="?op=galeria" class="op">Galeria</a></li>
+						<li><a href="?op=galeria" class="op">Galerías</a></li>
 					</ul>
 				</div>
 				<div class="logo">
@@ -82,9 +81,9 @@ switch ($op) {
 				<ul>
 					<li><a href="?op=convocatoria" class="op2">Convocatoria</a></li>
 					<li><a href="?op=estadisticas" class="op2">Estadistica</a></li>
-					<li><a href="?op=proximos_partidos" class="op2">Proximos Partidos</a></li>
+					<li><a href="?op=proximos_partidos" class="op2">Próximos Partidos</a></li>
 					<li><a href="?op=videos" class="op2">Videos</a></li>
-					<li><a href="?op=galeria" class="op2">Galeria</a></li>
+					<li><a href="?op=galeria" class="op2">Galerías</a></li>
 				</ul>
 				<div class="redes" style="position: relative;text-align: center;">
 					<ul>
@@ -96,6 +95,5 @@ switch ($op) {
 			</div>
 		</footer>
 	</div>
-	
 </body>
 </html>

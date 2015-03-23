@@ -11,7 +11,7 @@
 				<li>
 					<a href="?op=proximos_partidos" class="bb bb2">
 						<div class="txb">
-							<h2>Proximos Partido</h2>
+							<h2>Próximos Partidos</h2>
 						</div>
 					</a>
 				</li>
