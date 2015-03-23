@@ -26,7 +26,7 @@ if(!empty($_POST)) {
 		
 	} else {
 		$valid = false;
-		$error = "Los juegos jugados deben coincidir con los jg, je, jp";
+		$error = "Los juegos jugados deben coincidir con la suma de los juegos ganados, juegos empatados, juegos perdidos";
 		header("Location: agregar_equipo.php?error=$error");
 	}
 
@@ -65,9 +65,9 @@ if(!empty($_POST)) {
 	<div class="container">
 		<h2 class="text-center"> Estadistica</h2>
 		<hr>
+		<?php include('mensajes.php'); ?>
 		<form action="agregar_equipo.php" method="post" class="form-signin">
 
-			<?php include('mensajes.php'); ?>
 			<label>Selecciona Rama:</label>
 			<br>
 			<label class="espacio">

@@ -38,15 +38,16 @@ if($_SESSION['auth'] != 'SI') {
 					include("database.php");
 					$pdo = Database::connect();
 					$sql = " SELECT * FROM ramas ORDER BY pts DESC ";
-
+					$num = 0;
 					foreach($pdo->query($sql) as $row) {
-						$num = 0;
+						
 						if ($row['rama'] === 'V') {
 							echo "<tr>";
 								if($row['id']) {
 									$num = $num +1;
 									echo "<td align='center'>".$num."</td>";
 								}
+
 								echo "<td align='center'>".$row['nombre']."</td>";
 								echo "<td align='center'>".$row['jj']."</td>";
 								echo "<td align='center'>".$row['jg']."</td>";
@@ -89,15 +90,10 @@ if($_SESSION['auth'] != 'SI') {
 			</thead>
 			<tbody>
 				<?php
-
 					foreach($pdo->query($sql) as $row) {
-
 						if ($row['rama'] === 'F') {
 							echo "<tr>";
-								if($row['id']) {
-									$num = $num +1;
-									echo "<td align='center'>".$num."</td>";
-								}
+								echo "<td align='center'>1</td>";			
 								echo "<td align='center'>".$row['nombre']."</td>";
 								echo "<td align='center'>".$row['jj']."</td>";
 								echo "<td align='center'>".$row['jg']."</td>";
