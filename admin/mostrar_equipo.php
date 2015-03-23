@@ -14,9 +14,12 @@ if($_SESSION['auth'] != 'SI') {
 </head>
 <body>
 	<div class="container">
-		<h3>Rama varonil</h3>
+		<h3>Estadisticas</h3>
 		<a href="home.php" class="btn btn-danger">Regresar</a>
+		<hr>
 		<a href="agregar_equipo.php" class="btn btn-success">Agregar equipo</a>
+		<br>
+		<h3>Rama varonil</h3>
 		<table class="table table-bordered table-hover table-condensed">
 			<thead>
 				<tr>

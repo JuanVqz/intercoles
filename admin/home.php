@@ -38,12 +38,6 @@ if(!empty($_SESSION['usuario'])) {
 					<a href="#"><h2>Agregar foto</h2></a><small>(recuerda la foto es formato JPG )</small>
 				</li>
 			</ul>
-		<h1>Proximos partidos:</h1>
-			<ul>
-				<li>
-					<a href="#"><h2>Agregar proximos partidos</h2></a>
-				</li>
-			</ul>
 	</div>
 
 	<!--javascript -->
