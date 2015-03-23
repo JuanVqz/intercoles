@@ -45,7 +45,7 @@ if(!empty($_POST)) {
 		$q->execute(array($rama, $nombre, $jj, $jg, $je, $jp, $gf, $gc, $dif, $pts));
 		Database::disconnect();
 		$hecho = "Equipo creado satisfactoriamente";
-		header("Location: agregar_equipo.php?hecho=$hecho");
+		header("Location: mostrar_equipo.php?hecho=$hecho");
 	} else {
 		echo "Error al crear equipo";
 	}
@@ -63,7 +63,7 @@ if(!empty($_POST)) {
 </head>
 <body>
 	<div class="container">
-		<h2 class="text-center"> Estadistica</h2>
+		<h2 class="text-center"> Agregar Estadistica</h2>
 		<hr>
 		<?php include('mensajes.php'); ?>
 		<form action="agregar_equipo.php" method="post" class="form-signin">
@@ -99,8 +99,8 @@ if(!empty($_POST)) {
             <input type="number" name="gc" id="inputgc" class="form-control" required>
 
 			<br>
-			<a href="mostrar_equipo.php" class="btn btn-lg btn-danger">Regresar</a>
-            <button class="btn btn-lg btn-success" type="submit">Agregar Equipo</button>
+			<a href="mostrar_equipo.php" class="btn btn-danger">Regresar</a>
+            <button class="btn  btn-success" type="submit">Agregar Equipo</button>
 		</form>
 	</div>
 

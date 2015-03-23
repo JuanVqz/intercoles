@@ -4,14 +4,14 @@ class Database {
     private static $dbUsername = 'root';
     private static $dbUserPassword = 'root';
     private static $dbHost = 'localhost';
-	
-	private static $cont  = null;
-	
-	public function __construct() {
-		exit('No inicio la funcion');
-	}
-	
-	public static function connect() {
+    
+    private static $cont  = null;
+    
+    public function __construct() {
+        exit('No inicio la funcion');
+    }
+    
+    public static function connect() {
         if ( null == self::$cont ) {
             try {
                 self::$cont =  new PDO( "mysql:host=".self::$dbHost.";"."dbname=".self::$dbName, self::$dbUsername, self::$dbUserPassword);
@@ -23,7 +23,7 @@ class Database {
     }
 
     public static function disconnect() {
-		self::$cont = null;
-	}
+        self::$cont = null;
+    }
 }
 ?>

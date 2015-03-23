@@ -17,8 +17,9 @@ if($_SESSION['auth'] != 'SI') {
 		<h3>Estadisticas</h3>
 		<a href="home.php" class="btn btn-danger">Regresar</a>
 		<hr>
+		<?php include('mensajes.php'); ?>
+		
 		<a href="agregar_equipo.php" class="btn btn-success">Agregar equipo</a>
-		<br>
 		<h3>Rama varonil</h3>
 		<table class="table table-bordered table-hover table-condensed">
 			<thead>
