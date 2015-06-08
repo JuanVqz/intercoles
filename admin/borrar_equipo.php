@@ -24,17 +24,7 @@ if($_SESSION['auth'] != 'SI') {
 		header("Location: mostrar_equipo.php");
 	}
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link   href="css/bootstrap.css" rel="stylesheet">
-    <script src="js/bootstrap.min.js"></script>
-</head>
-<body>
-	
+<?php include('cabeza.php');?>
 	<div class="container">
 		<div class="row">
 			<h3>Borrar Equipo</h3>
@@ -50,5 +40,4 @@ if($_SESSION['auth'] != 'SI') {
 		</div>
 	</div> <!-- /container -->
 
-</body>
-</html>
+<?php include('pie.php');?>

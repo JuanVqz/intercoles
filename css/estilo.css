@@ -1,0 +1,137 @@
+h2 {
+  color: white;
+}
+
+/*.table tbody tr.success td {
+  background-color: #73FFAA;
+}*/
+
+body {
+    background: #38A748;
+    padding-top: 70px;
+    /*background-image: url(../imagenes/FINAL-01.jpg);*/
+    background-repeat: repeat-y repeat-x;
+}
+
+/*header*/
+.navbar {
+	border-radius: 0px;
+    margin-bottom: 0px;
+}
+
+#nav-arriba {
+    border-bottom: 2px solid rgb(255, 0, 0);
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #1D966A;
+}
+
+/*logo intercoles index*/
+.logo{
+	-webkit-animation: .5s .8s a-logo backwards ease-out;
+	animation: .5s .8s a-logo backwards ease-out;
+}
+
+.logo-grande img {
+    width: 600px;
+    height: auto;
+}
+
+.logo-chico img{
+    width: 250px;
+    height: auto;
+}
+
+/*home*/
+.letrero {
+    color: #F5C025;
+}
+
+/* proximos partidos */
+td {
+  color: #1F1B1C;
+}
+
+/*tabla de proximos partidos y estadisticas*/
+table {
+    background: #FFFFFF;  
+}
+
+.btn-warning {
+  color: #fff;
+  background-color: #7160A8;
+  border-color: #eea236;
+}
+
+/*footer*/
+.footer {
+    margin-top: 70px;
+    width: 100%;
+    background: #FEFEFE;
+    border-top: 2px solid rgb(255, 0, 0);
+}
+
+.btn-success {
+    color: #F8F8F8;
+    background: #5CB85C;
+    border-color: #E6212A;
+    margin-top: 2px;
+}
+
+.redes {
+	-webkit-animation: .4s .8s a-redes backwards ease-out;
+	animation: .4s .8s a-redes backwards ease-out;
+}
+
+.redes img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+@-webkit-keyframes a-redes{
+	0% {
+    opacity: 0;
+	bottom: -45px;
+  }
+
+  100% {
+    opacity: 1;
+	bottom: 0px;
+
+  }
+	}
+@keyframes a-redes{
+	0% {
+    opacity: 0;
+	bottom: -45px;
+  }
+
+  100% {
+    opacity: 1;
+	bottom: 0px;
+
+  }
+	}
+
+@-webkit-keyframes a-logo{
+	0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+
+  }
+	}
+@keyframes a-logo{
+	0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+
+  }
+}

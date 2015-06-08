@@ -8,6 +8,7 @@ if($_SESSION['auth'] != 'SI') {
 if(!empty($_POST)) {
 
 	$rama = $_POST['rama'];
+	$grupo = $_POST['grupo'];
 	$nombre = $_POST['nombre'];
 	$jj = $_POST['jj'];
 	$jg = $_POST['jg'];
@@ -19,11 +20,11 @@ if(!empty($_POST)) {
 	$dif = $gf - $gc;
 	$pts = ($jg*3)+($je*1);
 
-	$valid = true;	
+	$valid = true;
 	//los juegos jugados coincidan con los jg, jp, je
 	$jjugados = $jg + $je + $jp;
 	if($jj == $jjugados) {
-		
+
 	} else {
 		$valid = false;
 		$error = "Los juegos jugados deben coincidir con la suma de los juegos ganados, juegos empatados, juegos perdidos";
@@ -40,9 +41,9 @@ if(!empty($_POST)) {
 		include 'database.php';
 		$pdo = Database::connect();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$sql = "INSERT INTO ramas(rama, nombre, jj, jg, je, jp, gf, gc, dif, pts) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		$sql = "INSERT INTO ramas(nombre, grupo, rama, jj, jg, je, jp, gf, gc, dif, pts) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		$q = $pdo->prepare($sql);
-		$q->execute(array($rama, $nombre, $jj, $jg, $je, $jp, $gf, $gc, $dif, $pts));
+		$q->execute(array($nombre, $grupo, $rama, $jj, $jg, $je, $jp, $gf, $gc, $dif, $pts));
 		Database::disconnect();
 		$hecho = "Equipo creado satisfactoriamente";
 		header("Location: mostrar_equipo.php?hecho=$hecho");
@@ -52,16 +53,7 @@ if(!empty($_POST)) {
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<title>Menu formularios</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/signin.css">
-	<link rel="stylesheet" href="css/form.css">
-</head>
-<body>
+<?php include('cabeza.php');?>
 	<div class="container">
 		<h2 class="text-center"> Agregar Estadistica</h2>
 		<hr>
@@ -77,8 +69,12 @@ if(!empty($_POST)) {
   				<input type="radio" name="rama" value="F"> Femenil
 			</label>
 			<br>
+
+			<label for="inputGrupo" class="">Grupo:</label>
+			<input type="number" min="0" name="grupo" id="inputGrupo" class="form-control" required autofocus>
+
             <label for="inputNombre" class="">Nombre del equipo:</label>
-            <input type="text" name="nombre" id="inputNombre" class="form-control"  required autofocus>
+            <input type="text" name="nombre" id="inputNombre" class="form-control"  required>
 
             <label for="inputjj" class="">Juegos Jugados:</label>
             <input type="number" min="0" name="jj" id="inputjj" class="form-control" required>
@@ -103,9 +99,4 @@ if(!empty($_POST)) {
             <button class="btn  btn-success" type="submit">Agregar Equipo</button>
 		</form>
 	</div>
-
-	<!--javascript -->
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  	<script src="js/bootstrap.js"></script>
-</body>
-</html>
+<?php include('pie.php');?>

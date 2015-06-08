@@ -1,17 +1,17 @@
-<?php 
+<?php
 session_start();
 if($_SESSION['auth'] != 'SI') {
 	header("Location: index.php");
 	exit();
-}	
+}
 	require 'database.php';
 
 	if ( !empty($_GET['id'])) {
 		$id = $_REQUEST['id'];
 	}
-	
+
 	if (!empty($_POST)) {
-		
+
 		$id = $_POST['id_txt'];
 		$rama = $_POST['rama_txt'];
 
@@ -27,11 +27,11 @@ if($_SESSION['auth'] != 'SI') {
 
 		$dif = $gf - $gc;
 		$pts = ($jg*3)+($je*1);
-		
-		$valid = true;	
+
+		$valid = true;
 		$jjugados = $jg + $je + $jp;
 		if($jj == $jjugados) {
-			
+
 		} else {
 			$valid = false;
 			$error = "Los juegos jugados deben coincidir con la suma de los juegos ganados, juegos empatados, juegos perdidos";
@@ -56,7 +56,7 @@ if($_SESSION['auth'] != 'SI') {
 		$q = $pdo->prepare($sql);
 		$q->execute(array($id));
 		$data = $q->fetch(PDO::FETCH_ASSOC);
-		
+
 		$rama   = $data['rama'];
 		$nombre = $data['nombre'];
 		$jj     = $data['jj'];
@@ -71,25 +71,16 @@ if($_SESSION['auth'] != 'SI') {
 		Database::disconnect();
 	}
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<title>Menu formularios</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/signin.css">
-	<link rel="stylesheet" href="css/form.css">
-</head>
-<body>
+<?php include('cabeza.php');?>
 	<div class="container">
-		<h2 class="text-center"> Actualizar Estadistica</h2>
+		<h2 class="text-center">Actualizar Estadistica</h2>
 		<hr>
 		<?php include('mensajes.php'); ?>
 		<form action="actualizar_equipo.php" method="post" class="form-signin">
-				
+
 			<input type="hidden" name="id_txt" value="<?php echo $id;?>"/>
 			<input type="hidden" name="rama_txt" value="<?php echo $rama; ?>"/>
-			
+
             <label for="inputNombre" class="">Nombre del equipo:</label>
             <input type="text" name="nombre" id="inputNombre" class="form-control" value="<?php echo !empty($nombre)?$nombre:''; ?>" required autofocus>
 
@@ -113,12 +104,8 @@ if($_SESSION['auth'] != 'SI') {
 
 			<br>
 			<a href="mostrar_equipo.php" class="btn btn-lg btn-danger">Regresar</a>
-            <button class="btn btn-lg btn-success" type="submit">Agregar Equipo</button>
+            <button class="btn btn-lg btn-success" type="submit">Actualizar Equipo</button>
 		</form>
 	</div>
 
-	<!--javascript -->
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  	<script src="js/bootstrap.js"></script>
-</body>
-</html>
+<?php include('pie.php');?>

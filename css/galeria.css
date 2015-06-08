@@ -1,29 +1,14 @@
-/* galeria de fotos */
-#container {
-    background: red;
-    width: 850px;
-    margin: 150px auto;
+
+ul {         
+	padding:0 0 0 0;
+  	margin:0 0 0 0;
 }
 
-#container img{
-    cursor: pointer;
+.container ul li {     
+	list-style:none;
+	margin-bottom: 5px;
 }
 
-#previa {
-    background: rgba(0,0,0,0,0.5);
-    display: none;
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-#previa div {
-    margin: 30px auto;
-    width: 381px;
-}
-
-.galleria-theme-classic {
-	background: rgba(0,0,0,0,0.5);
+ul li img {
+  	cursor: pointer;
 }
