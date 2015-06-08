@@ -3,35 +3,36 @@ error_reporting(E_ALL ^E_NOTICE );
 $op = $_GET['op'];
 
 switch ($op) {
-	case 'convocatoria':
-		$contenido = "convocatoria.php";
-		$titulo = "Intercoles Convocatoria";
-	break;
-
 	case 'estadisticas':
 		$contenido = "estadisticas.php";
-		$titulo = "Intercoles Estadisticas";
+		$titulo = "ESTADISTICAS INTERCOLES";
+	break;
+
+	case 'convocatoria':
+		$contenido = "convocatoria.php";
+		$titulo = "CONVOCATORIA INTERCOLES";
 	break;
 
 	case 'proximos_partidos':
 		$contenido = "proximos_partidos.php";
-		$titulo = "Intercoles Proximos Partidos";
+		$titulo = "PROXIMOS PARTIDOS INTERCOLES";
 	break;
 
 	case 'videos':
 		$contenido = "videos.php";
-		$titulo = "Intercoles Videos";
+		$titulo = "VIDEOS INTERCOLES";
 	break;
 
 	case 'galeria':
 		$contenido = "galeria.php";
-		$titulo = "Intercoles Galeria";
+		$titulo = "GALERIA INTERCOLES";
 	break;
 
 	default:
 		$contenido = "home.php";
-		$titulo = "Intercoles 2015";
+		$titulo = "INTERCOLES 2015";
 	break;
+
 }
 ?>
 
@@ -39,61 +40,84 @@ switch ($op) {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
     <meta name="description" content="El Torneo de Intercoles de Azteca Oaxaca 2015, es el único torneo estudiantil que se transmite en televisión.">
-    <meta name="keywords" content="Azteca deportes, Intercoles, Torneo de Azteca Oaxaca, Kiddos, Rabbits, Juniors, Tiggers, Warriors, Teens, Mini teens, torneo de futbol estudiantil, torneo de futbol Oaxaca">
+    <meta name="keywords" content="Azteca deportes, Intercoles, Torneo de Azteca Oaxaca, intercoles 2015, torneo de futbol estudiantil, torneo de futbol Oaxaca, secundaria oaxaca 2015, tv azteca oaxaca 2015, torneo de secundarias oaxaca, intercoles oaxaca">
 
-    <title>INTERCOLES 2015</title>
+	<link rel="icon" type="image/png" href="icon.png">
 
-    <!--script js-->
-    <script src="js/jquery.min.js"></script>
-    <script src="galleria/galleria-1.4.2.js"></script>
+    <title> <?php echo $titulo; ?> </title>
+	
+	<!--script js-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
 
     <!-- css -->
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/galeria.css">
 
 </head>
 <body>
-	<div class="page">
-		<header class="list">
-			<div class="cab">
-				<div class="menu">
-					<ul>
-						<li><a href="?op=convocatoria" class="op">Convocatoria</a></li>
-						<li><a href="?op=estadisticas" class="op">Estadisticas</a></li>
-						<li><a href="?op=proximos_partidos" class="op">Próximos Partidos</a></li>
-						<li><a href="?op=videos" class="op">Videos</a></li>
-						<li><a href="?op=galeria" class="op">Galerías</a></li>
-					</ul>
-				</div>
-				<div class="logo">
-					<a href="index.php">
-						<img src="imagenes/logo.png" height="3300" width="2550">
-					</a>
-				</div>
+	
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="nav-arriba">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.php"><span><img src="icon.png" height="32" width="32"></span>INTERCOLES OAXACA</a>
 			</div>
-		</header>
 
-		<?php include($contenido); ?>
-
-		<footer>
-			<div class="elpie">
-				<p> AZTECA INTERCOLES OAXACA 2015. TODOS LOS DERECHOS RESERVADOS</p>
-				<ul>
-					<li><a href="?op=convocatoria" class="op2">Convocatoria</a></li>
-					<li><a href="?op=estadisticas" class="op2">Estadistica</a></li>
-					<li><a href="?op=proximos_partidos" class="op2">Próximos Partidos</a></li>
-					<li><a href="?op=videos" class="op2">Videos</a></li>
-					<li><a href="?op=galeria" class="op2">Galerías</a></li>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+				<ul class="nav navbar-nav">
+					<li class="<?php if($titulo == 'ESTADISTICAS INTERCOLES') { echo 'active'; } ?>"><a href="?op=estadisticas">ESTADISTICAS</a></li>
+					<li class="<?php if($titulo == 'PROXIMOS PARTIDOS INTERCOLES') { echo 'active'; } ?>"><a href="?op=proximos_partidos">PRÓXIMOS PARTIDOS</a></li>
+					<li class="<?php if($titulo == 'VIDEOS INTERCOLES') { echo 'active'; } ?>"><a href="?op=videos">VIDEOS</a></li>
+					<li class="<?php if($titulo == 'GALERIA INTERCOLES') { echo 'active'; } ?>"><a href="?op=galeria">GALERÍAS</a></li>
+					<li class="<?php if($titulo == 'CONVOCATORIA INTERCOLES') { echo 'active'; } ?>"><a href="?op=convocatoria">CONVOCATORIA</a></li>
 				</ul>
-				<div class="redes" style="position: relative;text-align: center;">
-					<ul>
-						<li><a href="https://es-es.facebook.com/AztecaOaxacaOficial" target="_blank"><img src="imagenes/social/facebook.png" width="82" height="81" /></a></li>
-						<li><a href="https://www.youtube.com/watch?v=0sYELi1YD-Q" target="_blank"><img src="imagenes/social/youtube.png" width="82" height="81" /></a></li>
-						<li><a href="https://twitter.com/aztecaoaxaca" target="_blank"><img src="imagenes/social/twitter.png" width="82" height="81" /></a></li>
-					</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	
+				
+	<div class="container">
+		<?php include($contenido); ?>
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col col-xs-12 col-md-6">	
+					<div class="redes">
+						<a href="https://es-es.facebook.com/AztecaOaxacaOficial" target="_blank"><img src="imagenes/social/facebook.png" width="40" height="40"/></a>
+						<a href="https://www.youtube.com/watch?v=0sYELi1YD-Q" target="_blank"><img src="imagenes/social/youtube.png" width="40" height="40" /></a>
+						<a href="https://twitter.com/aztecaoaxaca" target="_blank"><img src="imagenes/social/twitter.png" width="40" height="40" /></a>
+					</div>
+				</div>
+				<div class="col col-xs-12 col-md-6">
+					<div class="pull-right">
+						<a href="?op=convocatoria" class="navbar-button btn btn-success">Convocatoria</a>
+						<a href="?op=estadisticas" class="navbar-button btn btn-success">Estadistica</a>
+						<a href="?op=proximos_partidos" class="navbar-button btn btn-success">Próximos Partidos</a>
+						<a href="?op=videos" class="navbar-button btn btn-success">Videos</a>
+						<a href="?op=galeria" class="navbar-button btn btn-success">Galerías</a>	
+					</div>
 				</div>
 			</div>
-		</footer>
-	</div>
+			<div class="row">
+				<p class="navbar-text pull-right"><strong>AZTECA INTERCOLES OAXACA 2015.</strong></p>			
+			</div>
+		</div>
+	</footer>
+
+	
 </body>
 </html>

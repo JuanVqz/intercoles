@@ -1,64 +1,39 @@
-<section>
-		<div class="content">
-			<ul class="sec1">
-				<li>
-					<a href="?op=estadisticas" class="bb bb1">
-						<div class="txb">
-							<h2>Las Estadisticas</h2>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="?op=proximos_partidos" class="bb bb2">
-						<div class="txb">
-							<h2>Próximos Partidos</h2>
-						</div>
-					</a>
-				</li>
-			</ul>
+<div class="row">
+	<div class="logo logo-grande hidden-xs col col-sm-offset-1 col-md-offset-2 col-lg-offset-3">
+		<a href="index.php"><img src="imagenes/logo.png" style="margin-left:10px;"></a> 
+	</div>
+	<div class="logo logo-chico visible-xs col col-xs-offset-1">
+		<a href="index.php"><img src="imagenes/logo.png" style="margin-left:10px;"></a> 
+	</div> 
+</div>
+
+<br><br>
+<div class="text-center">
+	<div class="row">
+		<div class="col col-xs-12 col-sm-6">
+			<a href="?op=estadisticas" style="text-decoration:none">
+				<img src="imagenes/fdo-ball.jpg" class="img-thumbnail" width="355" height="386">
+				<div class="letrero">	
+					<h2>LAS ESTADISTICAS</h2>
+				</div>
+			</a>
+		</div>
+		<div class="col col-xs-12 col-sm-6">
+			<a href="?op=proximos_partidos" style="text-decoration:none">
+				<img src="imagenes/fdo-conv.jpg" class="img-thumbnail" width="355" height="386">
+				<div class="letrero">	
+					<h2>PRÓXIMOS PARTIDOS</h2>
+				</div>
+			</a>
 		</div>
 
-	</section>
-
-	<section>
-		<div class="sec2">
-			<ul>
-				<!-- <li>
-					<div class="not">
-						<div class="lasnot">
-							<h2>Avisos del torneo</h2>
-							<h3>Los por menores del día</h3>
-							<a href="noticia.php?id_noticia=7">
-								<div class="unanot">
-									<span>27 Feb 15</span>
-									<p>ART&Iacute;CULOS OLVIDADOS</p>
-								</div>
-							</a>
-							<a href="noticia.php?id_noticia=6">
-								<div class="unanot">
-									<span>26 Feb 15</span>
-									<p>ESTACIONAMIENTO </p>
-								</div>
-							</a>
-							<a href="noticia.php?id_noticia=5">
-								<div class="unanot">
-									<span>24 Feb 15</span>
-									<p>LIMPIEZA</p>
-								</div>
-							</a>
-						</div>
-					</div>
-				</li> -->
-				<style>.fotogal1{ background-image:url(imagenes/893.JPG); background-size: cover; background-position: center center;}</style>
-
-				<li class="fotogal">
-					<a href="?op=galeria" class="gal"><div class="tgal">
-						<h2>Galerías</h2>
-						<h3>Las mejores fotos del torneo</h3></div>
-					</a>
-				</li>
-
-			</ul>
+		<div class="col col-xs-12">
+			<a href="?op=galeria" style="text-decoration:none">
+				<img src="imagenes/galeria.jpg" height="400" width="600" class="img-thumbnail" >
+				<div class="letrero">	
+					<h2>LAS MEJORES FOTOS</h2>
+				</div>
+			</a>
 		</div>
-	</section>
-	<section></section>
+	</div>
+</div>
